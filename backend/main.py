@@ -1,0 +1,547 @@
+from backend import offset
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+import pandas as pd
+import numpy as np
+import sys
+from pathlib import Path
+from backend.agents.orchestrator import build_agentic_trace
+from backend.agents.agent_runtime import run_agentic_workflow
+
+# ============================================================
+# PROJECT PATH
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+
+sys.path.append(str(BASE_DIR / "backend"))
+
+
+# ============================================================
+# AI MODULES
+# ============================================================
+
+
+from offset.trajectory_similarity import (
+    rank_offset_wells,
+    load_trajectories,
+)
+
+from ai.risk_predictor import train_model, predict_risk
+from ai.recommendation_engine import generate_recommendation
+from ai.rag_search import search_events
+
+
+# ============================================================
+# DATA FILES
+# ============================================================
+
+RISK_FILE = BASE_DIR / "data/processed/risk_features.csv"
+
+TRAJECTORY_FILE = (
+    BASE_DIR / "data/processed/well_trajectories.csv"
+)
+
+
+# ============================================================
+# FASTAPI APP
+# ============================================================
+
+app = FastAPI(
+    title="eRTMAC-NWIS API",
+    description=(
+        "AI-Powered Offset Well Intelligence "
+        "and Decision Support System"
+    ),
+    version="1.0.0"
+)
+
+
+# ============================================================
+# CORS
+# ============================================================
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# ============================================================
+# REQUEST MODEL
+# ============================================================
+
+class AnalyzeRequest(BaseModel):
+    well_id: str
+
+
+# ============================================================
+# ROOT
+# ============================================================
+
+@app.get("/")
+def root():
+
+    return {
+        "system": "eRTMAC-NWIS",
+        "status": "running",
+        "version": "1.0.0"
+    }
+
+
+# ============================================================
+# HEALTH CHECK
+# ============================================================
+
+@app.get("/health")
+def health():
+
+    return {
+        "status": "healthy"
+    }
+
+
+# ============================================================
+# AVAILABLE WELLS
+# ============================================================
+
+@app.get("/wells")
+def get_wells():
+
+    if not TRAJECTORY_FILE.exists():
+
+        raise HTTPException(
+            status_code=500,
+            detail="Trajectory data not found."
+        )
+
+    trajectory_df = pd.read_csv(
+        TRAJECTORY_FILE
+    )
+
+    wells = sorted(
+        trajectory_df["well_id"]
+        .dropna()
+        .unique()
+        .tolist()
+    )
+
+    return {
+        "count": len(wells),
+        "wells": wells
+    }
+
+
+# ============================================================
+# ANALYZE WELL
+# ============================================================
+
+@app.post("/analyze")
+def analyze_well(request: AnalyzeRequest):
+
+    well_id = request.well_id
+
+    # --------------------------------------------------------
+    # LOAD RISK DATA
+    # --------------------------------------------------------
+
+    if not RISK_FILE.exists():
+
+        raise HTTPException(
+            status_code=500,
+            detail="Risk feature data not found."
+        )
+
+    risk_df = pd.read_csv(
+        RISK_FILE
+    )
+
+    well_data = risk_df[
+        risk_df["well_id"] == well_id
+    ].copy()
+
+    if well_data.empty:
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"No risk data found for well: {well_id}"
+        )
+
+    # Latest available drilling condition
+    current = well_data.iloc[-1]
+
+    # --------------------------------------------------------
+    # CURRENT DRILLING CONDITION
+    # --------------------------------------------------------
+
+    current_condition = {
+
+        "depth": float(
+            current["Depth"]
+        ),
+
+        "wob": float(
+            current["WOB"]
+        ),
+
+        "torque": float(
+            current["TORQUE"]
+        ),
+
+        "flow_in": float(
+            current["FLOWIN"]
+        ),
+
+        "flow_out": float(
+            current["FLOWOUT"]
+        ),
+
+        "pump": float(
+            current["PUMP"]
+        )
+    }
+
+    # --------------------------------------------------------
+    # OFFSET WELL INTELLIGENCE
+    # --------------------------------------------------------
+
+    
+    
+    
+    # Load trajectory stations grouped by well ID.
+    wells = load_trajectories()
+
+    print("DEBUG trajectory wells type:", type(wells).__name__)
+    print("DEBUG trajectory well IDs:", list(wells.keys()))
+
+    offsets = []
+
+    try:
+        if well_id not in wells:
+            raise ValueError(
+                f"Target well {well_id!r} not found in trajectory data"
+            )
+
+        offset_results = rank_offset_wells(
+            target_well=well_id,
+            wells=wells,
+            top_k=5,
+        )
+
+        print("DEBUG offset results:", offset_results)
+
+        for result in offset_results:
+            offsets.append({
+                "well_id": result["offset_well"],
+                "similarity_score": float(
+                    result["similarity_score"]
+                ),
+                "target_max_md": float(
+                    result["target_max_md"]
+                ),
+                "offset_max_md": float(
+                    result["offset_max_md"]
+                ),
+                "depth_difference": float(
+                    result["depth_difference"]
+                ),
+            })
+
+    except Exception as e:
+        import traceback
+        print("Offset ranking error:", repr(e))
+        traceback.print_exc()
+        offsets = []
+
+
+
+   
+         
+
+    # --------------------------------------------------------
+    # RISK PREDICTION
+    # --------------------------------------------------------
+
+    try:
+
+        model = train_model()
+
+        features = [
+
+            "Depth",
+            "BITDEP",
+            "VDEPTH",
+            "WOB",
+            "TORQUE",
+            "TQ_IN_AMPS",
+            "TQ_IN_AMPS_AV",
+            "FLOWIN",
+            "FLOWOUT",
+            "MWIN",
+            "MWOUT",
+            "ECDCS",
+            "PUMP",
+            "PUMPPOWER"
+
+        ]
+
+        sample = {}
+
+        for feature in features:
+
+            sample[feature] = current.get(
+                feature,
+                np.nan
+            )
+
+        probability, risk_level = (
+            predict_risk(
+                model,
+                sample
+            )
+        )
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=f"Risk prediction failed: {str(e)}"
+        )
+
+    # --------------------------------------------------------
+    # HISTORICAL RAG INTELLIGENCE
+    # --------------------------------------------------------
+
+    query = (
+
+        f"drilling operation at depth "
+        f"{current['Depth']:.0f} m "
+
+        f"with WOB "
+        f"{current['WOB']:.2f}, "
+
+        f"torque "
+        f"{current['TORQUE']:.2f}, "
+
+        f"flow changes and pump activity"
+
+    )
+
+    try:
+
+        rag_results = search_events(
+            query,
+            top_k=5
+        )
+
+    except Exception as e:
+
+        print(
+            f"RAG search error: {e}"
+        )
+
+        rag_results = []
+
+    historical_events = []
+
+    for result in rag_results:
+
+        historical_events.append({
+
+            "similarity_score": float(
+                result[
+                    "similarity_score"
+                ]
+            ),
+
+            "well_id": result[
+                "well_id"
+            ],
+
+            "event_type": result[
+                "event_type"
+            ],
+
+            "depth": float(
+                result[
+                    "event_md"
+                ]
+            ),
+
+            "timestamp": result[
+                "timestamp"
+            ],
+
+            "description": result[
+                "description"
+            ]
+
+        })
+
+    # --------------------------------------------------------
+    # DETERMINE EVENT TYPE
+    # --------------------------------------------------------
+
+    event_type = None
+
+    if historical_events:
+
+        top_event = historical_events[0][
+            "event_type"
+        ]
+
+        if top_event in [
+
+            "pressure_event",
+            "gas_event",
+            "well_control",
+            "stuck_pipe",
+            "lost_circulation"
+
+        ]:
+
+            event_type = top_event
+
+    # --------------------------------------------------------
+    # RECOMMENDATION ENGINE
+    # --------------------------------------------------------
+
+    recommendations = generate_recommendation(
+
+        risk_probability=probability,
+
+        risk_level=risk_level,
+
+        event_type=event_type,
+
+        depth=current["Depth"]
+
+    )
+
+    # --------------------------------------------------------
+    # FINAL API RESPONSE
+    # --------------------------------------------------------
+
+    return {
+
+        "system": "eRTMAC-NWIS",
+
+        "target_well": well_id,
+
+        "current_condition":
+            current_condition,
+
+        "risk": {
+
+            "probability": float(
+                probability
+            ),
+
+            "level": risk_level
+
+        },
+
+        "offset_wells":
+            offsets,
+
+        "historical_events":
+            historical_events,
+
+        "recommendations":
+            recommendations,
+
+        "status": "complete"
+
+    }
+
+
+
+@app.post("/agentic-analyze")
+def agentic_analyze(request: AnalyzeRequest):
+    analysis = analyze_well(request)
+
+    def retry_historical_search():
+        """Retry RAG once with a broader query if initial evidence is empty."""
+        condition = analysis.get("current_condition") or {}
+
+        depth = condition.get("depth")
+        wob = condition.get("wob")
+        torque = condition.get("torque")
+
+        query_parts = [
+            "historical drilling incidents and abnormal drilling conditions"
+        ]
+
+        if depth is not None:
+            query_parts.append(f"depth {depth} m")
+        if wob is not None:
+            query_parts.append(f"weight on bit {wob}")
+        if torque is not None:
+            query_parts.append(f"torque {torque}")
+
+        retry_query = " ".join(query_parts)
+
+        try:
+            results = search_events(retry_query, top_k=5)
+            events = []
+
+            for result in results or []:
+                events.append({
+                    "similarity_score": float(
+                        result.get("similarity_score", 0.0)
+                    ),
+                    "well_id": result.get("well_id"),
+                    "event_type": result.get("event_type"),
+                    "depth": result.get("event_md"),
+                    "timestamp": result.get("timestamp"),
+                })
+
+            return {
+                "attempted": True,
+                "query": retry_query,
+                "result_count": len(events),
+                "events": events,
+                "status": "results_found" if events else "no_results",
+            }
+
+        except Exception as exc:
+            # Keep the API available and record the failure for diagnosis.
+            print(f"Agentic RAG retry error: {exc}")
+            return {
+                "attempted": True,
+                "query": retry_query,
+                "result_count": 0,
+                "events": [],
+                "status": "error",
+                "error": str(exc),
+            }
+
+    retry_result = None
+
+    if not analysis.get("historical_events"):
+        retry_result = retry_historical_search()
+
+        if retry_result["events"]:
+            analysis["historical_events"] = retry_result["events"]
+
+    agentic = run_agentic_workflow(analysis)
+
+    agentic["retrieval_retry"] = (
+        retry_result
+        if retry_result is not None
+        else {
+            "attempted": False,
+            "status": "not_needed",
+            "reason": "Initial analysis already returned historical events.",
+        }
+    )
+
+    analysis["agentic"] = agentic
+    return analysis

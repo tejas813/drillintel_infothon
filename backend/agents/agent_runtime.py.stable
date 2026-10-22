@@ -1,0 +1,232 @@
+
+"""Evidence-driven agent runtime for DrillIntel.
+
+Runs without an API key. Tool selection is dynamic and deterministic.
+An LLM can later use the same tool registry to select and invoke tools.
+This module does not control drilling equipment.
+"""
+
+from typing import Any
+
+
+def _get(data: dict, *keys: str, default=None):
+    """Safely retrieve nested dictionary values."""
+    current: Any = data
+    for key in keys:
+        if not isinstance(current, dict):
+            return default
+        current = current.get(key)
+    return default if current is None else current
+
+
+def _risk_review(analysis: dict) -> dict:
+    risk = analysis.get("risk") or {}
+    probability = risk.get("probability")
+    level = str(risk.get("level", "UNKNOWN")).upper()
+
+    valid = (
+        isinstance(probability, (int, float))
+        and level in {"LOW", "MEDIUM", "HIGH"}
+    )
+
+    return {
+        "tool": "risk_review",
+        "valid": valid,
+        "risk_level": level,
+        "score": probability,
+        "finding": (
+            "Risk output is present; its meaning and calibration "
+            "must be validated before operational use."
+            if valid
+            else "Risk output is missing or has an unexpected format."
+        ),
+    }
+
+
+def _offset_review(analysis: dict) -> dict:
+    # Check common output keys without assuming a particular schema.
+    offsets = next(
+        (
+            analysis[key]
+            for key in (
+                "offset_wells",
+                "offsets",
+                "similar_wells",
+                "offset_intelligence",
+            )
+            if analysis.get(key) is not None
+        ),
+        None,
+    )
+
+    if isinstance(offsets, dict):
+        count = len(offsets.get("wells", offsets.get("results", [])))
+    elif isinstance(offsets, list):
+        count = len(offsets)
+    else:
+        count = 0
+
+    return {
+        "tool": "offset_review",
+        "available": offsets is not None,
+        "count": count,
+        "finding": (
+            f"Offset evidence is available; detected {count} entries."
+            if offsets is not None
+            else "Offset evidence was not found under recognized output keys."
+        ),
+    }
+
+
+def _event_review(analysis: dict) -> dict:
+    events = next(
+        (
+            analysis[key]
+            for key in (
+                "historical_events",
+                "rag_events",
+                "events",
+                "historical_intelligence",
+            )
+            if analysis.get(key) is not None
+        ),
+        None,
+    )
+
+    if isinstance(events, dict):
+        items = events.get("events", events.get("results", []))
+        count = len(items) if isinstance(items, list) else 0
+    elif isinstance(events, list):
+        count = len(events)
+    else:
+        count = 0
+
+    return {
+        "tool": "event_review",
+        "available": events is not None,
+        "count": count,
+        "finding": (
+            f"Historical evidence is available; detected {count} entries."
+            if events is not None
+            else "Historical event evidence was not found under recognized output keys."
+        ),
+    }
+
+
+def _recommendation_review(analysis: dict) -> dict:
+    recommendation = next(
+        (
+            analysis[key]
+            for key in (
+                "recommendation",
+                "recommendations",
+                "nwis_recommendation",
+            )
+            if analysis.get(key) is not None
+        ),
+        None,
+    )
+
+    present = recommendation not in (None, "", [], {})
+    return {
+        "tool": "recommendation_review",
+        "available": present,
+        "finding": (
+            "A recommendation exists and requires evidence review."
+            if present
+            else "No recommendation was detected; human review is required."
+        ),
+    }
+
+
+# Registry of callable tools. Future LLM tool calls must use this registry.
+TOOL_REGISTRY = {
+    "risk_review": _risk_review,
+    "offset_review": _offset_review,
+    "event_review": _event_review,
+    "recommendation_review": _recommendation_review,
+}
+
+
+def run_agentic_workflow(analysis: dict) -> dict:
+    """Select tools based on observed evidence and return an auditable trace."""
+    steps = []
+    findings = {}
+
+    def execute(tool_name: str, reason: str):
+        result = TOOL_REGISTRY[tool_name](analysis)
+        findings[tool_name] = result
+
+        steps.append({
+            "stage": tool_name,
+            "name": tool_name.replace("_", " ").title(),
+            "status": "complete",
+            "tool": tool_name,
+            "reason": reason,
+            "detail": result["finding"],
+            "result": result,
+        })
+        return result
+
+    # Start with risk because every well analysis should be checked for it.
+    risk = execute("risk_review", "Inspect the model output and its format.")
+
+    # Select evidence tools conditionally instead of running a fixed seven-step list.
+    if risk.get("risk_level") in {"MEDIUM", "HIGH", "UNKNOWN"} or not risk.get("valid"):
+        execute(
+            "offset_review",
+            "Inspect supporting offset-well evidence because risk is elevated or uncertain.",
+        )
+        execute(
+            "event_review",
+            "Inspect historical events to look for supporting or conflicting evidence.",
+        )
+    else:
+        # Even when risk is LOW, inspect historical evidence if it exists.
+        if any(
+            analysis.get(key) is not None
+            for key in ("historical_events", "rag_events", "events", "historical_intelligence")
+        ):
+            execute(
+                "event_review",
+                "Check whether historical evidence is available to contextualize the risk result.",
+            )
+        else:
+            execute(
+                "offset_review",
+                "Check whether offset-well evidence is available to contextualize the risk result.",
+            )
+
+    recommendation = execute(
+        "recommendation_review",
+        "Check whether the analysis produced a recommendation for human review.",
+    )
+
+    missing = [
+        name
+        for name, result in findings.items()
+        if result.get("available") is False or result.get("valid") is False
+    ]
+
+    return {
+        "workflow": "DrillIntel evidence-driven agent runtime",
+        "mode": "local_dynamic_tool_selection",
+        "llm_enabled": False,
+        "human_review_required": True,
+        "overall_status": "complete",
+        "planner": {
+            "type": "rule_based_fallback",
+            "decision_count": len(steps),
+            "tools_available": list(TOOL_REGISTRY.keys()),
+        },
+        "agents": steps,
+        "findings": findings,
+        "evidence_gaps": missing,
+        "limitations": [
+            "No LLM API key is configured; tool selection uses local rules.",
+            "Evidence checks inspect the existing analysis response; they do not rerun retrieval.",
+            "Risk output is not necessarily a calibrated incident probability.",
+            "Decision support only; not an automated drilling control system.",
+            "A qualified drilling engineer must verify evidence and recommendations.",
+        ],
+    }

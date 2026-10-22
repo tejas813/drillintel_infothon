@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Node / React
+node_modules/
+dist/
+.vite/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large ML/cache files
+*.pkl
+*.pt
+*.pth
+*.onnx
+
+# Local runtime files
+*.sqlite
+
+# Generated processed datasets
+data/processed/*.csv
+data/processed/*.pkl
+data/processed/*.faiss
