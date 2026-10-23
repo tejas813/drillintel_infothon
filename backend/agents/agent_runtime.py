@@ -199,7 +199,7 @@ def _llm_synthesis(analysis: dict, findings: dict) -> dict:
     )
 
     try:
-        with urllib.request.urlopen(request, timeout=99) as response:
+        with urllib.request.urlopen(request, timeout=300) as response:
             result = json.loads(response.read().decode("utf-8"))
 
         content = result.get("message", {}).get("content", "")
