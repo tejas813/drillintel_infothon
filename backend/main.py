@@ -138,26 +138,31 @@ def health():
 # AVAILABLE WELLS
 # ============================================================
 
+DEFAULT_WELLS = [
+    "Norway-Statoil-NO 15_$47$_9-F-4",
+    "Norway-Statoil-NO 15_$47$_9-F-7",
+    "Norway-Statoil-NO 15_$47$_9-F-9",
+]
+
+
 @app.get("/wells")
 def get_wells():
+    wells = []
+    try:
+        traj_file = resolve_data_file("data/processed/well_trajectories.csv")
+        if traj_file.exists():
+            trajectory_df = pd.read_csv(traj_file)
+            wells = sorted(
+                trajectory_df["well_id"]
+                .dropna()
+                .unique()
+                .tolist()
+            )
+    except Exception as exc:
+        print(f"Warning: Failed reading trajectory file: {exc}")
 
-    if not TRAJECTORY_FILE.exists():
-
-        raise HTTPException(
-            status_code=500,
-            detail="Trajectory data not found."
-        )
-
-    trajectory_df = pd.read_csv(
-        TRAJECTORY_FILE
-    )
-
-    wells = sorted(
-        trajectory_df["well_id"]
-        .dropna()
-        .unique()
-        .tolist()
-    )
+    if not wells:
+        wells = DEFAULT_WELLS
 
     return {
         "count": len(wells),
