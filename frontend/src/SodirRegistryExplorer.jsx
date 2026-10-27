@@ -12,13 +12,15 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export default function SodirRegistryExplorer({ stats }) {
+export default function SodirRegistryExplorer({ stats, apiUrl }) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedField, setSelectedField] = useState("VOLVE");
   const [wellbores, setWellbores] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(false);
+
+  const endpointBase = (apiUrl || import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
 
   useEffect(() => {
     if (!isOpen) return;
@@ -32,7 +34,7 @@ export default function SodirRegistryExplorer({ stats }) {
         if (selectedField && selectedField !== "ALL") params.set("field", selectedField);
         params.set("limit", "15");
 
-        const res = await fetch(`/api/sodir/wellbores?${params.toString()}`);
+        const res = await fetch(`${endpointBase}/sodir/wellbores?${params.toString()}`);
         if (!res.ok) throw new Error("Failed to fetch SODIR wellbores");
         const data = await res.json();
         if (active) {

@@ -28,7 +28,7 @@ import IssueNotificationPanel from "./IssueNotificationPanel";
 import SodirRegistryExplorer from "./SodirRegistryExplorer";
 import "./index.css";
 
-const API_URL = "/api";
+const API_URL = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
 const ease = [0.22, 1, 0.36, 1];
 
 function formatWellName(id) {
@@ -532,7 +532,7 @@ function App() {
         </section>
 
         {/* 5. Official SODIR Regional Wellbore Registry Explorer */}
-        <SodirRegistryExplorer stats={sodirStats} />
+        <SodirRegistryExplorer stats={sodirStats} apiUrl={API_URL} />
 
         {/* Sleek Minimal Footer */}
         <footer className="app-footer">
