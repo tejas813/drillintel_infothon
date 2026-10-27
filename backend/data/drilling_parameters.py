@@ -209,7 +209,7 @@ def main():
     log_files = [
         f
         for f in WITSML_DIR.rglob("*.xml")
-        if "/log/" in str(f)
+        if "log" in f.parts
     ]
 
     print(f"\nLog files found: {len(log_files)}")

@@ -1,4 +1,11 @@
-from rag_search import search_events
+try:
+    from ai.rag_search import search_events
+except ModuleNotFoundError:
+    try:
+        from rag_search import search_events
+    except ModuleNotFoundError:
+        from backend.ai.rag_search import search_events
+
 
 
 def generate_rag_response(query, top_k=5):

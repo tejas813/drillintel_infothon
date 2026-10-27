@@ -31,6 +31,15 @@ from offset.trajectory_similarity import (
 from ai.risk_predictor import train_model, predict_risk
 from ai.recommendation_engine import generate_recommendation
 from ai.rag_search import search_events
+from ai.issue_detector import detect_issue_notification
+
+from backend.data.sodir_service import (
+    get_sodir_stats,
+    search_sodir_wellbores,
+    get_sodir_wellbore,
+)
+from backend.data.well_locations import normalize_well_name
+from backend.offset.spatial import spatial_similarity
 
 
 # ============================================================
@@ -67,6 +76,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -209,12 +220,14 @@ def analyze_well(request: AnalyzeRequest):
     }
 
     # --------------------------------------------------------
-    # OFFSET WELL INTELLIGENCE
+    # OFFSET WELL INTELLIGENCE & SODIR SPATIAL ENRICHMENT
     # --------------------------------------------------------
 
-    
-    
-    
+    # Resolve target well SODIR metadata & coordinates
+    target_sodir = get_sodir_wellbore(well_id)
+    target_lat = target_sodir.get("latitude") if target_sodir else None
+    target_lon = target_sodir.get("longitude") if target_sodir else None
+
     # Load trajectory stations grouped by well ID.
     wells = load_trajectories()
 
@@ -238,20 +251,55 @@ def analyze_well(request: AnalyzeRequest):
         print("DEBUG offset results:", offset_results)
 
         for result in offset_results:
+            off_id = result["offset_well"]
+            off_sodir = get_sodir_wellbore(off_id)
+            off_lat = off_sodir.get("latitude") if off_sodir else None
+            off_lon = off_sodir.get("longitude") if off_sodir else None
+
+            spatial = spatial_similarity(
+                target_lat,
+                target_lon,
+                off_lat,
+                off_lon,
+            )
+            spatial_score = spatial.get("score")
+            distance_km = spatial.get("distance_km")
+
+            traj_score = float(result["similarity_score"])
+            target_max_md = float(result["target_max_md"])
+            offset_max_md = float(result["offset_max_md"])
+            depth_diff = float(result["depth_difference"])
+
+            depth_score = 1.0 / (
+                1.0 + depth_diff / max(target_max_md, 1.0)
+            )
+
+            if spatial_score is not None:
+                master_score = (
+                    0.50 * traj_score
+                    + 0.20 * depth_score
+                    + 0.30 * spatial_score
+                )
+            else:
+                master_score = 0.70 * traj_score + 0.30 * depth_score
+
             offsets.append({
-                "well_id": result["offset_well"],
-                "similarity_score": float(
-                    result["similarity_score"]
-                ),
-                "target_max_md": float(
-                    result["target_max_md"]
-                ),
-                "offset_max_md": float(
-                    result["offset_max_md"]
-                ),
-                "depth_difference": float(
-                    result["depth_difference"]
-                ),
+                "well_id": off_id,
+                "sodir_name": off_sodir.get("wellbore_name") if off_sodir else normalize_well_name(off_id),
+                "similarity_score": traj_score,
+                "trajectory_score": round(traj_score, 4),
+                "depth_score": round(depth_score, 4),
+                "spatial_score": spatial_score,
+                "distance_km": distance_km,
+                "master_score": round(master_score, 4),
+                "target_max_md": target_max_md,
+                "offset_max_md": offset_max_md,
+                "depth_difference": depth_diff,
+                "latitude": off_lat,
+                "longitude": off_lon,
+                "field": off_sodir.get("field") if off_sodir else None,
+                "operator": off_sodir.get("operator") if off_sodir else None,
+                "purpose": off_sodir.get("purpose") if off_sodir else None,
             })
 
     except Exception as e:
@@ -429,37 +477,29 @@ def analyze_well(request: AnalyzeRequest):
     # FINAL API RESPONSE
     # --------------------------------------------------------
 
-    return {
-
+    response = {
         "system": "eRTMAC-NWIS",
-
         "target_well": well_id,
-
-        "current_condition":
-            current_condition,
-
+        "sodir_metadata": target_sodir,
+        "sodir_verified": bool(target_sodir and target_sodir.get("latitude") is not None),
+        "current_condition": current_condition,
         "risk": {
-
-            "probability": float(
-                probability
-            ),
-
-            "level": risk_level
-
+            "probability": float(probability),
+            "level": risk_level,
         },
-
-        "offset_wells":
-            offsets,
-
-        "historical_events":
-            historical_events,
-
-        "recommendations":
-            recommendations,
-
-        "status": "complete"
-
+        "offset_wells": offsets,
+        "historical_events": historical_events,
+        "recommendations": recommendations,
+        "status": "complete",
     }
+
+    try:
+        response["issue_notification"] = detect_issue_notification(response)
+    except Exception as e:
+        print(f"Issue notification detection error: {e}")
+        response["issue_notification"] = None
+
+    return response
 
 
 
@@ -544,4 +584,77 @@ def agentic_analyze(request: AnalyzeRequest):
     )
 
     analysis["agentic"] = agentic
+    if agentic.get("issue_notification"):
+        analysis["issue_notification"] = agentic["issue_notification"]
     return analysis
+
+
+# ============================================================
+# OFFICIAL SODIR DATASET ENDPOINTS
+# ============================================================
+
+@app.get("/sodir/stats")
+def sodir_stats():
+    """
+    Get summary statistics for the official Norwegian Offshore Directorate
+    (SODIR) FactMaps wellbore point layer dataset (9,869 records).
+    """
+    try:
+        return get_sodir_stats()
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to load SODIR dataset statistics: {exc}"
+        )
+
+
+@app.get("/sodir/wellbores")
+def list_sodir_wellbores(
+    search: str = None,
+    field: str = None,
+    operator: str = None,
+    purpose: str = None,
+    limit: int = 50,
+    offset: int = 0,
+):
+    """
+    Query the official SODIR wellbores layer with search filters and pagination.
+    """
+    try:
+        return search_sodir_wellbores(
+            search=search,
+            field=field,
+            operator=operator,
+            purpose=purpose,
+            limit=limit,
+            offset=offset,
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to query SODIR wellbores: {exc}"
+        )
+
+
+@app.get("/sodir/wellbores/{wellbore_name:path}")
+def get_single_sodir_wellbore(wellbore_name: str):
+    """
+    Retrieve full official metadata and WGS84 coordinates for a specific wellbore.
+    """
+    try:
+        wb = get_sodir_wellbore(wellbore_name)
+        if not wb:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Wellbore '{wellbore_name}' not found in official SODIR registry."
+            )
+        return wb
+    except HTTPException:
+        raise
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to retrieve wellbore '{wellbore_name}': {exc}"
+        )
+
+

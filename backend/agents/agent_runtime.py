@@ -147,12 +147,14 @@ def _llm_synthesis(analysis: dict, findings: dict) -> dict:
     endpoint = os.getenv(
         "OLLAMA_URL", "http://127.0.0.1:11434"
     ).rstrip("/") + "/api/chat"
+    timeout_sec = float(os.getenv("DRILLINTEL_LLM_TIMEOUT", "10.0"))
 
     # Send only relevant analysis fields, not the entire API response.
     context = {
         "target_well": analysis.get("target_well"),
         "current_condition": analysis.get("current_condition"),
         "risk": analysis.get("risk"),
+        "issue_notification": analysis.get("issue_notification"),
         "offset_wells": (analysis.get("offset_wells") or [])[:5],
         "historical_events": (analysis.get("historical_events") or [])[:5],
         "recommendations": (analysis.get("recommendations") or [])[:5],
@@ -162,8 +164,8 @@ def _llm_synthesis(analysis: dict, findings: dict) -> dict:
     prompt = (
         "You are the DrillIntel evidence synthesis assistant. "
         "Analyze only the supplied JSON evidence. "
-        "Summarize the reported risk, relevant offset-well evidence, "
-        "historical events, recommendations, and missing information. "
+        "Summarize the reported risk, issue notifications, unknown scenarios, "
+        "relevant offset-well evidence, historical events, recommendations, and missing information. "
         "Distinguish facts from interpretations. Mention conflicting or "
         "potentially irrelevant evidence. Never invent facts, event details, "
         "or citations. Do not change or recalculate the supplied risk score. "
@@ -199,7 +201,7 @@ def _llm_synthesis(analysis: dict, findings: dict) -> dict:
     )
 
     try:
-        with urllib.request.urlopen(request, timeout=300) as response:
+        with urllib.request.urlopen(request, timeout=timeout_sec) as response:
             result = json.loads(response.read().decode("utf-8"))
 
         content = result.get("message", {}).get("content", "")
@@ -223,11 +225,42 @@ def _llm_synthesis(analysis: dict, findings: dict) -> dict:
             "error": str(exc)[:300],
         }
 
+def _unknown_scenario_review(analysis: dict) -> dict:
+    """Evaluate drilling conditions against historical RAG and offset bounds for unknown scenarios."""
+    try:
+        from backend.ai.issue_detector import detect_issue_notification
+    except ImportError:
+        from ai.issue_detector import detect_issue_notification
+
+    issue = detect_issue_notification(analysis)
+    analysis["issue_notification"] = issue
+
+    if issue.get("is_unknown_scenario"):
+        finding = f"UNKNOWN SCENARIO (Severity: {issue.get('severity')}): {issue.get('summary')}"
+    elif issue.get("flagged"):
+        finding = f"ISSUE NOTIFICATION (Severity: {issue.get('severity')}): {issue.get('summary')}"
+    else:
+        finding = "Nominal drilling pattern; consistent with historical reference cases."
+
+    return {
+        "tool": "unknown_scenario_review",
+        "flagged": issue.get("flagged", False),
+        "is_unknown_scenario": issue.get("is_unknown_scenario", False),
+        "severity": issue.get("severity", "LOW"),
+        "novelty_score": issue.get("novelty_score", 0.0),
+        "uncertainty": issue.get("uncertainty", "LOW"),
+        "triggering_count": len(issue.get("triggering_measurements", [])),
+        "finding": finding,
+        "issue_notification": issue,
+    }
+
+
 TOOL_REGISTRY = {
     "risk_review": _risk_review,
     "offset_review": _offset_review,
     "event_review": _event_review,
     "recommendation_review": _recommendation_review,
+    "unknown_scenario_review": _unknown_scenario_review,
 }
 
 
@@ -301,7 +334,16 @@ def run_agentic_workflow(analysis: dict) -> dict:
         "recommendation_review",
         "Check for a recommendation after the selected evidence reviews.",
     )
-        # Fifth stage: optional LLM synthesis of existing evidence.
+
+    # Fifth stage: evaluate unknown scenario and issue notification flags
+    unknown_result = execute(
+        "unknown_scenario_review",
+        "Inspect operational parameters and historical/offset bounds for unknown scenarios.",
+    )
+    issue_notification = unknown_result.get("issue_notification") or analysis.get("issue_notification")
+    analysis["issue_notification"] = issue_notification
+
+    # Sixth stage: optional LLM synthesis of existing evidence.
     llm_result = _llm_synthesis(analysis, findings)
     findings["llm_synthesis"] = llm_result
 
@@ -332,6 +374,7 @@ def run_agentic_workflow(analysis: dict) -> dict:
         "llm_enabled": llm_result["status"] == "complete",
         "human_review_required": True,
         "overall_status": "complete",
+        "issue_notification": issue_notification,
         "planner": {
             "type": "rule_based_fallback",
             "decision_count": len(steps),
