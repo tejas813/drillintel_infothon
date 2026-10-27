@@ -1,0 +1,10 @@
+well_id,normalized_name,sodir_wellbore_name,latitude,longitude,field,operator,total_depth,purpose,status,source
+NO 15/9-F-4,15/9-F-4,15/9-F-4,58.44098557400008,1.8858799680000402,VOLVE,StatoilHydro ASA,3510,INJECTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+NO 15/9-F-7,15/9-F-7,15/9-F-7,58.44102757500008,1.8858629660000474,VOLVE,Statoil ASA (old),1085,PRODUCTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+NO 15/9-F-9,15/9-F-9,15/9-F-9,58.44099057400007,1.885901969000031,VOLVE,StatoilHydro ASA,1085,PRODUCTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+Norway-Statoil-NO 15_$47$_9-F-4,15/9-F-4,15/9-F-4,58.44098557400008,1.8858799680000402,VOLVE,StatoilHydro ASA,3510,INJECTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+Norway-Statoil-NO 15_$47$_9-F-7,15/9-F-7,15/9-F-7,58.44102757500008,1.8858629660000474,VOLVE,Statoil ASA (old),1085,PRODUCTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+Norway-Statoil-NO 15_$47$_9-F-9,15/9-F-9,15/9-F-9,58.44099057400007,1.885901969000031,VOLVE,StatoilHydro ASA,1085,PRODUCTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+15/9-F-4,15/9-F-4,15/9-F-4,58.44098557400008,1.8858799680000402,VOLVE,StatoilHydro ASA,3510,INJECTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+15/9-F-7,15/9-F-7,15/9-F-7,58.44102757500008,1.8858629660000474,VOLVE,Statoil ASA (old),1085,PRODUCTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps
+15/9-F-9,15/9-F-9,15/9-F-9,58.44099057400007,1.885901969000031,VOLVE,StatoilHydro ASA,1085,PRODUCTION,P&A,Norwegian Offshore Directorate (SODIR) FactMaps

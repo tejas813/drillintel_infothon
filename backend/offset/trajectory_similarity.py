@@ -11,7 +11,19 @@ import math
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data" / "processed"
 
-TRAJECTORY_FILE = DATA_DIR / "well_trajectories.csv"
+def get_trajectory_file() -> Path:
+    candidates = [
+        DATA_DIR / "well_trajectories.csv",
+        Path(__file__).resolve().parents[1] / "data" / "processed" / "well_trajectories.csv",
+        Path.cwd() / "data" / "processed" / "well_trajectories.csv",
+        Path.cwd().parent / "data" / "processed" / "well_trajectories.csv",
+    ]
+    for p in candidates:
+        if p.exists():
+            return p
+    return candidates[0]
+
+TRAJECTORY_FILE = get_trajectory_file()
 
 
 # ------------------------------------------------------------

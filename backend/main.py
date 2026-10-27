@@ -46,11 +46,24 @@ from backend.offset.spatial import spatial_similarity
 # DATA FILES
 # ============================================================
 
-RISK_FILE = BASE_DIR / "data/processed/risk_features.csv"
+def resolve_data_file(subpath: str) -> Path:
+    filename = Path(subpath).name
+    candidates = [
+        BASE_DIR / subpath,
+        Path(__file__).resolve().parent / subpath,
+        Path(__file__).resolve().parent / "data" / "processed" / filename,
+        Path.cwd() / subpath,
+        Path.cwd() / "data" / "processed" / filename,
+        Path.cwd().parent / subpath,
+        Path.cwd().parent / "data" / "processed" / filename,
+    ]
+    for p in candidates:
+        if p.exists():
+            return p
+    return candidates[0]
 
-TRAJECTORY_FILE = (
-    BASE_DIR / "data/processed/well_trajectories.csv"
-)
+RISK_FILE = resolve_data_file("data/processed/risk_features.csv")
+TRAJECTORY_FILE = resolve_data_file("data/processed/well_trajectories.csv")
 
 
 # ============================================================
