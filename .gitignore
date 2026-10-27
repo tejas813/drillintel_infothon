@@ -45,9 +45,8 @@ dist/
 # Local runtime files
 *.sqlite
 
-# Generated processed datasets
-data/processed/*.csv
-!data/processed/sodir_wellbores.csv
+# Generated processed datasets (drilling_parameters is 169MB, keep ignored)
+data/processed/drilling_parameters.csv
 data/processed/*.pkl
 data/processed/*.faiss
 
