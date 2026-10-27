@@ -1,0 +1,1458 @@
+[
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-09-30T10:17:46.000Z",
+    "description": "Well 15/9-F-4 set up in Baker system",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-09-30T10:17:46.000Z. Description: Well 15/9-F-4 set up in Baker system."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-09-30T21:35:13.000Z",
+    "description": "Pressure test - cmt unit",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-09-30T21:35:13.000Z. Description: Pressure test - cmt unit."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-09-30T23:44:45.000Z",
+    "description": "TBT - Skid to 15 /9-F-4",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-09-30T23:44:45.000Z. Description: TBT - Skid to 15 /9-F-4."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-01T00:16:52.000Z",
+    "description": "P. testing from cmt unit to drillfloor",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-01T00:16:52.000Z. Description: P. testing from cmt unit to drillfloor."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-01T03:44:13.000Z",
+    "description": "High pressure testing of WL-BOP",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-01T03:44:13.000Z. Description: High pressure testing of WL-BOP."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-01T05:00:16.000Z",
+    "description": "ARTE out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-01T05:00:16.000Z. Description: ARTE out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-01T17:00:18.000Z",
+    "description": "ARTE back",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-01T17:00:18.000Z. Description: ARTE back."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-01T19:32:03.000Z",
+    "description": "Removed tree cap\tHook up Altus pump",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-01T19:32:03.000Z. Description: Removed tree cap\tHook up Altus pump."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-01T21:33:54.000Z",
+    "description": "TBT - P/U cement head",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-01T21:33:54.000Z. Description: TBT - P/U cement head."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T02:01:15.000Z",
+    "description": "Add SW to ACT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T02:01:15.000Z. Description: Add SW to ACT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T02:09:59.000Z",
+    "description": "Pressure test cement spool",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T02:09:59.000Z. Description: Pressure test cement spool."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T02:18:11.000Z",
+    "description": "Low pressure test",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T02:18:11.000Z. Description: Low pressure test."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T02:26:08.000Z",
+    "description": "High pressure test",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T02:26:08.000Z. Description: High pressure test."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T02:41:50.000Z",
+    "description": "TBT - Bullhead SW to remove HC",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T02:41:50.000Z. Description: TBT - Bullhead SW to remove HC."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T03:03:54.000Z",
+    "description": "Pit 12 in",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T03:03:54.000Z. Description: Pit 12 in."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T03:28:46.000Z",
+    "description": "Pressure up DHSV to 520 bar\tLine up mud pumps through cement spool",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T03:28:46.000Z. Description: Pressure up DHSV to 520 bar\tLine up mud pumps through cement spool."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T03:54:16.000Z",
+    "description": "Finished pumping 10 m3 wash pill\tLine over to pump 70 m3 SW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T03:54:16.000Z. Description: Finished pumping 10 m3 wash pill\tLine over to pump 70 m3 SW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T04:24:32.000Z",
+    "description": "Bleed off pressure on cmt unit",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T04:24:32.000Z. Description: Bleed off pressure on cmt unit."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T04:31:47.000Z",
+    "description": "Add SW to ACT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T04:31:47.000Z. Description: Add SW to ACT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T04:58:46.000Z",
+    "description": "ARTE out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T04:58:46.000Z. Description: ARTE out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T16:58:46.000Z",
+    "description": "ARTE back\tOngoing: Inflow test cmt plug",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T16:58:46.000Z. Description: ARTE back\tOngoing: Inflow test cmt plug."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T17:34:10.000Z",
+    "description": "LP Inflow test DHSV",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T17:34:10.000Z. Description: LP Inflow test DHSV."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T17:54:01.000Z",
+    "description": "Holp pressure at 240 bar\tPerform a 70 bar LP inflow test of DHSV",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T17:54:01.000Z. Description: Holp pressure at 240 bar\tPerform a 70 bar LP inflow test of DHSV."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T18:50:18.000Z",
+    "description": "Bleed down pressure in tubing to 10 bar",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T18:50:18.000Z. Description: Bleed down pressure in tubing to 10 bar."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T19:36:33.000Z",
+    "description": "Pressure up tubing to equalize",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T19:36:33.000Z. Description: Pressure up tubing to equalize."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "pressure_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T19:43:26.000Z",
+    "description": "Bleed down pressure",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: pressure_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T19:43:26.000Z. Description: Bleed down pressure."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T20:00:12.000Z",
+    "description": "Rig down cement spool & scaffolding",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T20:00:12.000Z. Description: Rig down cement spool & scaffolding."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T21:17:55.000Z",
+    "description": "Continue BOP test",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T21:17:55.000Z. Description: Continue BOP test."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-02T22:49:15.000Z",
+    "description": "BOP test #5",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-02T22:49:15.000Z. Description: BOP test #5."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T00:12:22.000Z",
+    "description": "Run BOP test #6 while R/D scaffolding & spool",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T00:12:22.000Z. Description: Run BOP test #6 while R/D scaffolding & spool."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T01:16:52.000Z",
+    "description": "Finished removing hatches\tPerform final BOP test #7",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T01:16:52.000Z. Description: Finished removing hatches\tPerform final BOP test #7."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T01:34:00.000Z",
+    "description": "Remove XMT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T01:34:00.000Z. Description: Remove XMT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T04:40:31.000Z",
+    "description": "Lift spacer spool",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T04:40:31.000Z. Description: Lift spacer spool."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T04:57:27.000Z",
+    "description": "ARTE out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T04:57:27.000Z. Description: ARTE out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T16:56:39.000Z",
+    "description": "ARTE back",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T16:56:39.000Z. Description: ARTE back."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T17:16:02.000Z",
+    "description": "Well on TT\tClean & clear rigfloor",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T17:16:02.000Z. Description: Well on TT\tClean & clear rigfloor."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T18:06:25.000Z",
+    "description": "TBT - Retrieve BPV and dart",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T18:06:25.000Z. Description: TBT - Retrieve BPV and dart."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T18:26:47.000Z",
+    "description": "Retrieve dart",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T18:26:47.000Z. Description: Retrieve dart."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T19:19:31.000Z",
+    "description": "Retrieve BPV",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T19:19:31.000Z. Description: Retrieve BPV."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T20:27:43.000Z",
+    "description": "TBT - Install csg. tong\tPrepare for install THRT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T20:27:43.000Z. Description: TBT - Install csg. tong\tPrepare for install THRT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T20:40:23.000Z",
+    "description": "Install csg. tong",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T20:40:23.000Z. Description: Install csg. tong."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-03T21:41:03.000Z",
+    "description": "TBT - Run THRT &  land on TH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-03T21:41:03.000Z. Description: TBT - Run THRT &  land on TH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T03:30:04.000Z",
+    "description": "Attempt to install THRT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T03:30:04.000Z. Description: Attempt to install THRT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T03:38:00.000Z",
+    "description": "Pull out to inspect THRT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T03:38:00.000Z. Description: Pull out to inspect THRT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T04:41:03.000Z",
+    "description": "M/U swedge to 7\" tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T04:41:03.000Z. Description: M/U swedge to 7\" tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T04:59:18.000Z",
+    "description": "ARTE out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T04:59:18.000Z. Description: ARTE out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T17:00:06.000Z",
+    "description": "ARTE back\tTBT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T17:00:06.000Z. Description: ARTE back\tTBT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T17:14:19.000Z",
+    "description": "Check equipment",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T17:14:19.000Z. Description: Check equipment."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T22:37:36.000Z",
+    "description": "TBT - M/U swedge assy",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T22:37:36.000Z. Description: TBT - M/U swedge assy."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T22:46:44.000Z",
+    "description": "Fill ACT w/SW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T22:46:44.000Z. Description: Fill ACT w/SW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T23:22:41.000Z",
+    "description": "Adding SW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T23:22:41.000Z. Description: Adding SW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-04T23:25:44.000Z",
+    "description": "Change handling eq.",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-04T23:25:44.000Z. Description: Change handling eq.."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T00:34:34.000Z",
+    "description": "Change slips to PS21",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T00:34:34.000Z. Description: Change slips to PS21."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T01:01:21.000Z",
+    "description": "RIH w/ 5 1/2\" DP",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T01:01:21.000Z. Description: RIH w/ 5 1/2\" DP."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T01:35:45.000Z",
+    "description": "Fill pipe",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T01:35:45.000Z. Description: Fill pipe."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T02:02:35.000Z",
+    "description": "Empty TT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T02:02:35.000Z. Description: Empty TT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T02:24:48.000Z",
+    "description": "TBT prior to circulation",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T02:24:48.000Z. Description: TBT prior to circulation."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T02:31:23.000Z",
+    "description": "Line over to ACT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T02:31:23.000Z. Description: Line over to ACT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T02:36:01.000Z",
+    "description": "Pit 9 & 11 in, Pump min. 50 m3 SW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T02:36:01.000Z. Description: Pit 9 & 11 in, Pump min. 50 m3 SW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T02:51:22.000Z",
+    "description": "Stage up to 3000 lpm",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T02:51:22.000Z. Description: Stage up to 3000 lpm."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T02:57:27.000Z",
+    "description": "Pit 13 in, Fill ACT w/ SW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T02:57:27.000Z. Description: Pit 13 in, Fill ACT w/ SW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T03:08:56.000Z",
+    "description": "Pull 3 m to be above combination wiper plug\tOverflow at shakers - red. flow rate",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T03:08:56.000Z. Description: Pull 3 m to be above combination wiper plug\tOverflow at shakers - red. flow rate."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T03:34:58.000Z",
+    "description": "Add SW to ACT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T03:34:58.000Z. Description: Add SW to ACT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T03:44:13.000Z",
+    "description": "Pit 10 in",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T03:44:13.000Z. Description: Pit 10 in."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T03:47:55.000Z",
+    "description": "3BU",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T03:47:55.000Z. Description: 3BU."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T03:58:30.000Z",
+    "description": "OIW below 30 ppm",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T03:58:30.000Z. Description: OIW below 30 ppm."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T04:05:13.000Z",
+    "description": "Line over to TT\tR/B std & install pump assy",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T04:05:13.000Z. Description: Line over to TT\tR/B std & install pump assy."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T04:19:47.000Z",
+    "description": "Add defoamer to TT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T04:19:47.000Z. Description: Add defoamer to TT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T04:54:01.000Z",
+    "description": "ARTE out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T04:54:01.000Z. Description: ARTE out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T16:57:17.000Z",
+    "description": "ARTE back\tWOC",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T16:57:17.000Z. Description: ARTE back\tWOC."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T22:07:20.000Z",
+    "description": "Line over to ACT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T22:07:20.000Z. Description: Line over to ACT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T22:29:16.000Z",
+    "description": "RIH to tag TOC",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T22:29:16.000Z. Description: RIH to tag TOC."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T22:34:42.000Z",
+    "description": "Indications of poor cement\tPull up & circulate 1BU",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T22:34:42.000Z. Description: Indications of poor cement\tPull up & circulate 1BU."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T22:54:01.000Z",
+    "description": "Overflow at shakers - red. flow",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T22:54:01.000Z. Description: Overflow at shakers - red. flow."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-05T23:04:34.000Z",
+    "description": "Line over shakers to dump",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-05T23:04:34.000Z. Description: Line over shakers to dump."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T00:06:17.000Z",
+    "description": "Line over to TT\tWOC",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T00:06:17.000Z. Description: Line over to TT\tWOC."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T00:38:24.000Z",
+    "description": "Line over to ACT\tStart circulation & RIH to tag TOC\tTOC: 2438 m",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T00:38:24.000Z. Description: Line over to ACT\tStart circulation & RIH to tag TOC\tTOC: 2438 m."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T00:50:56.000Z",
+    "description": "Release spear",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T00:50:56.000Z. Description: Release spear."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T00:53:29.000Z",
+    "description": "Well on TT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T00:53:29.000Z. Description: Well on TT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T00:58:15.000Z",
+    "description": "Flowcheck",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T00:58:15.000Z. Description: Flowcheck."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T01:02:19.000Z",
+    "description": "TBT - L/D pipe",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T01:02:19.000Z. Description: TBT - L/D pipe."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T01:07:52.000Z",
+    "description": "Add defoamer to TT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T01:07:52.000Z. Description: Add defoamer to TT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T01:30:28.000Z",
+    "description": "POOH  & L/D DP in singles",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T01:30:28.000Z. Description: POOH  & L/D DP in singles."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T03:14:45.000Z",
+    "description": "L/D spear assy",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T03:14:45.000Z. Description: L/D spear assy."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T04:24:16.000Z",
+    "description": "Remove power rollers\tClean & clear rigfloor",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T04:24:16.000Z. Description: Remove power rollers\tClean & clear rigfloor."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T04:58:15.000Z",
+    "description": "ARTE out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T04:58:15.000Z. Description: ARTE out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T16:58:29.000Z",
+    "description": "ARTE back",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T16:58:29.000Z. Description: ARTE back."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T17:08:16.000Z",
+    "description": "Position the jet inside tie-back adapter\tWash profile area",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T17:08:16.000Z. Description: Position the jet inside tie-back adapter\tWash profile area."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T17:32:51.000Z",
+    "description": "POOH & L/O LH pipe & GE tool",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T17:32:51.000Z. Description: POOH & L/O LH pipe & GE tool."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-4",
+    "event_type": "drilling_event",
+    "event_md": 3510.0,
+    "timestamp": "2016-10-06T18:58:21.000Z",
+    "description": "POOH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-4. Event type: drilling_event. Measured depth: 3510.0 m. Timestamp: 2016-10-06T18:58:21.000Z. Description: POOH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T08:36:19.000Z",
+    "description": "on location new well 15/9-F-7",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T08:36:19.000Z. Description: on location new well 15/9-F-7."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T16:20:18.000Z",
+    "description": "pick up BHA and pull tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T16:20:18.000Z. Description: pick up BHA and pull tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T16:39:12.000Z",
+    "description": "rih",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T16:39:12.000Z. Description: rih."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T17:30:18.000Z",
+    "description": "Pull TH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T17:30:18.000Z. Description: Pull TH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T17:46:01.000Z",
+    "description": "Toolbox Talk Prior to Rig Up Tubing Equipment",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T17:46:01.000Z. Description: Toolbox Talk Prior to Rig Up Tubing Equipment."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T18:00:02.000Z",
+    "description": "Rig Up Tubing Equipment",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T18:00:02.000Z. Description: Rig Up Tubing Equipment."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-28T22:14:49.000Z",
+    "description": "Pull Tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-28T22:14:49.000Z. Description: Pull Tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T01:59:27.000Z",
+    "description": "Cont. Pull Tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T01:59:27.000Z. Description: Cont. Pull Tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T06:14:06.000Z",
+    "description": "rig down csg eq",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T06:14:06.000Z. Description: rig down csg eq."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T08:25:10.000Z",
+    "description": "P/U spear and set spear in 7 5/8\" Tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T08:25:10.000Z. Description: P/U spear and set spear in 7 5/8\" Tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T09:04:58.000Z",
+    "description": "rih with tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T09:04:58.000Z. Description: rih with tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T11:03:22.000Z",
+    "description": "release spear and pooh with RT and 5 1/2\" DP",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T11:03:22.000Z. Description: release spear and pooh with RT and 5 1/2\" DP."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T11:47:08.000Z",
+    "description": "bha",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T11:47:08.000Z. Description: bha."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T12:02:35.000Z",
+    "description": "rig up for run ezsv plug",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T12:02:35.000Z. Description: rig up for run ezsv plug."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T12:28:21.000Z",
+    "description": "line over to active system ( pit 6 and 10)",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T12:28:21.000Z. Description: line over to active system ( pit 6 and 10)."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T12:45:48.000Z",
+    "description": "rih with ezsv plug",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T12:45:48.000Z. Description: rih with ezsv plug."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T13:47:55.000Z",
+    "description": "start pumping and wash setting area",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T13:47:55.000Z. Description: start pumping and wash setting area."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T13:57:11.000Z",
+    "description": "vol pumped 5m3",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T13:57:11.000Z. Description: vol pumped 5m3."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T14:06:49.000Z",
+    "description": "set EZSV plug @ 289 m MD",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T14:06:49.000Z. Description: set EZSV plug @ 289 m MD."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T14:19:07.000Z",
+    "description": "pull up 3 m above plug and pump 18 m3- dump returns",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T14:19:07.000Z. Description: pull up 3 m above plug and pump 18 m3- dump returns."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T14:32:27.000Z",
+    "description": "vol pumped 19m3",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T14:32:27.000Z. Description: vol pumped 19m3."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T14:36:33.000Z",
+    "description": "POOH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T14:36:33.000Z. Description: POOH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T14:49:47.000Z",
+    "description": "INSTALL PUMP IN SUB",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T14:49:47.000Z. Description: INSTALL PUMP IN SUB."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T15:09:43.000Z",
+    "description": "TOOL BOX TALK - CMT JOB",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T15:09:43.000Z. Description: TOOL BOX TALK - CMT JOB."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T15:32:51.000Z",
+    "description": "START CMT JOB",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T15:32:51.000Z. Description: START CMT JOB."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T15:46:44.000Z",
+    "description": "PUMP 2 M3 FW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T15:46:44.000Z. Description: PUMP 2 M3 FW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T16:07:12.000Z",
+    "description": "MIX AND PUMP 7.8 M3 OF 1.95 SG CEMENT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T16:07:12.000Z. Description: MIX AND PUMP 7.8 M3 OF 1.95 SG CEMENT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T16:22:31.000Z",
+    "description": "DISPLACE CEMENT WITH 2 M3 FW",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T16:22:31.000Z. Description: DISPLACE CEMENT WITH 2 M3 FW."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T17:02:19.000Z",
+    "description": "CIRCULATE 1.5 x WELL VOLUME",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T17:02:19.000Z. Description: CIRCULATE 1.5 x WELL VOLUME."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T17:20:34.000Z",
+    "description": "POOH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T17:20:34.000Z. Description: POOH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T19:00:28.000Z",
+    "description": "R/D Diverter",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T19:00:28.000Z. Description: R/D Diverter."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T21:06:49.000Z",
+    "description": "Mixing in P1",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T21:06:49.000Z. Description: Mixing in P1."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-29T21:57:07.000Z",
+    "description": "R/D surface riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-29T21:57:07.000Z. Description: R/D surface riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-30T00:30:59.000Z",
+    "description": "L/O Surface riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-30T00:30:59.000Z. Description: L/O Surface riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-30T01:49:15.000Z",
+    "description": "Stop monitoring for F-7",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-30T01:49:15.000Z. Description: Stop monitoring for F-7."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-7",
+    "event_type": "drilling_event",
+    "event_md": 1083.0,
+    "timestamp": "2016-07-30T01:53:29.000Z",
+    "description": "Prep move to F14",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-7. Event type: drilling_event. Measured depth: 1083.0 m. Timestamp: 2016-07-30T01:53:29.000Z. Description: Prep move to F14."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T00:07:11.000Z",
+    "description": "New well 15/9-F-9 has been set up",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T00:07:11.000Z. Description: New well 15/9-F-9 has been set up."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T00:24:25.000Z",
+    "description": "Continue install lifting arrangement on flow head",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T00:24:25.000Z. Description: Continue install lifting arrangement on flow head."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T02:15:17.000Z",
+    "description": "TBT - Lift surface riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T02:15:17.000Z. Description: TBT - Lift surface riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T02:50:18.000Z",
+    "description": "P/U riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T02:50:18.000Z. Description: P/U riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T03:01:15.000Z",
+    "description": "Lower surface riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T03:01:15.000Z. Description: Lower surface riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T03:18:33.000Z",
+    "description": "TBT - P/U diverter",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T03:18:33.000Z. Description: TBT - P/U diverter."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T03:41:03.000Z",
+    "description": "P/U diverter",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T03:41:03.000Z. Description: P/U diverter."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T05:26:55.000Z",
+    "description": "Fill up well",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T05:26:55.000Z. Description: Fill up well."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T06:00:40.000Z",
+    "description": "M/U TH retrieving tool",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T06:00:40.000Z. Description: M/U TH retrieving tool."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T06:13:38.000Z",
+    "description": "RIH w/ THRT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T06:13:38.000Z. Description: RIH w/ THRT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T07:01:53.000Z",
+    "description": "Pull TH assy",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T07:01:53.000Z. Description: Pull TH assy."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T07:08:45.000Z",
+    "description": "L/D landing string",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T07:08:45.000Z. Description: L/D landing string."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T07:19:53.000Z",
+    "description": "R/U WF csg handling equipment",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T07:19:53.000Z. Description: R/U WF csg handling equipment."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T09:13:54.000Z",
+    "description": "POOH TH assy",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T09:13:54.000Z. Description: POOH TH assy."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T09:36:39.000Z",
+    "description": "L/D TH assy",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T09:36:39.000Z. Description: L/D TH assy."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T11:13:10.000Z",
+    "description": "Pull 24 jnts 7 5/8\" tubing",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T11:13:10.000Z. Description: Pull 24 jnts 7 5/8\" tubing."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T11:18:27.000Z",
+    "description": "jnt 34",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T11:18:27.000Z. Description: jnt 34."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T12:06:17.000Z",
+    "description": "jnt 30",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T12:06:17.000Z. Description: jnt 30."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T12:56:55.000Z",
+    "description": "jnt 25",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T12:56:55.000Z. Description: jnt 25."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T15:01:06.000Z",
+    "description": "R/D csg handling equipment",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T15:01:06.000Z. Description: R/D csg handling equipment."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T16:07:05.000Z",
+    "description": "P/U spear",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T16:07:05.000Z. Description: P/U spear."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T16:14:13.000Z",
+    "description": "RIH on 5 1/2\" DP",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T16:14:13.000Z. Description: RIH on 5 1/2\" DP."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T16:46:04.000Z",
+    "description": "Engage spear",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T16:46:04.000Z. Description: Engage spear."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T17:54:01.000Z",
+    "description": "Empty & fill TT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T17:54:01.000Z. Description: Empty & fill TT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T18:01:15.000Z",
+    "description": "Flush pit",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T18:01:15.000Z. Description: Flush pit."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T18:22:25.000Z",
+    "description": "POOH w/spear assy to P/U mill",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T18:22:25.000Z. Description: POOH w/spear assy to P/U mill."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T20:16:52.000Z",
+    "description": "RIH w/ junk mill",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T20:16:52.000Z. Description: RIH w/ junk mill."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "well_control",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T20:34:58.000Z",
+    "description": "Kick drill",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: well_control. Measured depth: 1206.0 m. Timestamp: 2016-09-29T20:34:58.000Z. Description: Kick drill."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T20:59:36.000Z",
+    "description": "Record up and down weights",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T20:59:36.000Z. Description: Record up and down weights."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T21:03:03.000Z",
+    "description": "Tag at 200 m",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T21:03:03.000Z. Description: Tag at 200 m."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T21:12:03.000Z",
+    "description": "POOH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T21:12:03.000Z. Description: POOH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T22:14:29.000Z",
+    "description": "P/U EZSV",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T22:14:29.000Z. Description: P/U EZSV."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T22:36:01.000Z",
+    "description": "RIH w/EZSV\tInstall 2 pup joints for space out",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T22:36:01.000Z. Description: RIH w/EZSV\tInstall 2 pup joints for space out."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T22:45:48.000Z",
+    "description": "Adding SW to ACT",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T22:45:48.000Z. Description: Adding SW to ACT."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T23:14:29.000Z",
+    "description": "Set depth & record weights",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T23:14:29.000Z. Description: Set depth & record weights."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T23:22:41.000Z",
+    "description": "Tag top of fish\tWash setting area",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T23:22:41.000Z. Description: Tag top of fish\tWash setting area."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-29T23:33:54.000Z",
+    "description": "Set EZSV",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-29T23:33:54.000Z. Description: Set EZSV."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T00:11:41.000Z",
+    "description": "Start circulation",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T00:11:41.000Z. Description: Start circulation."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "gas_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T00:24:48.000Z",
+    "description": "OIW below 30 ppm, stop pumping\tGas: 2 %",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: gas_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T00:24:48.000Z. Description: OIW below 30 ppm, stop pumping\tGas: 2 %."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T00:36:33.000Z",
+    "description": "Line-up integrity test",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T00:36:33.000Z. Description: Line-up integrity test."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T00:42:54.000Z",
+    "description": "Open LTV, returns to be dumped",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T00:42:54.000Z. Description: Open LTV, returns to be dumped."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T00:47:08.000Z",
+    "description": "Mix & pump 1.9 sg cmt",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T00:47:08.000Z. Description: Mix & pump 1.9 sg cmt."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T01:01:47.000Z",
+    "description": "Displace cmt",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T01:01:47.000Z. Description: Displace cmt."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T01:07:36.000Z",
+    "description": "B/O pumping sub",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T01:07:36.000Z. Description: B/O pumping sub."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T01:23:45.000Z",
+    "description": "P/U single w/sponge ball",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T01:23:45.000Z. Description: P/U single w/sponge ball."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T01:39:27.000Z",
+    "description": "Start circulation, Returns to be dumped",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T01:39:27.000Z. Description: Start circulation, Returns to be dumped."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T01:56:23.000Z",
+    "description": "POOH",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T01:56:23.000Z. Description: POOH."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T02:18:33.000Z",
+    "description": "L/D pup joints",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T02:18:33.000Z. Description: L/D pup joints."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T02:34:58.000Z",
+    "description": "Riser has been drained, OOH\tClean & clear rigfloor",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T02:34:58.000Z. Description: Riser has been drained, OOH\tClean & clear rigfloor."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T03:03:22.000Z",
+    "description": "TBT - R/D diverter",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T03:03:22.000Z. Description: TBT - R/D diverter."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T03:53:45.000Z",
+    "description": "TBT - R/D surface riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T03:53:45.000Z. Description: TBT - R/D surface riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T04:06:01.000Z",
+    "description": "Pull surface riser",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T04:06:01.000Z. Description: Pull surface riser."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T04:41:43.000Z",
+    "description": "Clean and tidy rig floor",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T04:41:43.000Z. Description: Clean and tidy rig floor."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T06:29:24.000Z",
+    "description": "Inflow test 15/9-F-4",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T06:29:24.000Z. Description: Inflow test 15/9-F-4."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T09:18:27.000Z",
+    "description": "Start skidding rig",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T09:18:27.000Z. Description: Start skidding rig."
+  },
+  {
+    "well_id": "Norway-Statoil-NO 15_$47$_9-F-9",
+    "event_type": "drilling_event",
+    "event_md": 1206.0,
+    "timestamp": "2016-09-30T09:47:24.000Z",
+    "description": "Setting up well 15/9-F-4 in Baker system",
+    "text": "Well: Norway-Statoil-NO 15_$47$_9-F-9. Event type: drilling_event. Measured depth: 1206.0 m. Timestamp: 2016-09-30T09:47:24.000Z. Description: Setting up well 15/9-F-4 in Baker system."
+  }
+]

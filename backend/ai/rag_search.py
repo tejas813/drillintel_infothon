@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 try:
@@ -7,9 +8,21 @@ except ImportError:
     np = None
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-RAG_DIR = BASE_DIR / "data/processed/rag"
-INDEX_FILE = RAG_DIR / "events_index.faiss"
-METADATA_FILE = RAG_DIR / "events_metadata.json"
+
+def resolve_rag_file(filename: str) -> Path:
+    candidates = [
+        BASE_DIR / "data" / "processed" / "rag" / filename,
+        Path(__file__).resolve().parents[1] / "data" / "processed" / "rag" / filename,
+        Path.cwd() / "data" / "processed" / "rag" / filename,
+        Path.cwd() / "backend" / "data" / "processed" / "rag" / filename,
+    ]
+    for p in candidates:
+        if p.exists():
+            return p
+    return candidates[0]
+
+INDEX_FILE = resolve_rag_file("events_index.faiss")
+METADATA_FILE = resolve_rag_file("events_metadata.json")
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 _rag_cache = None
@@ -20,28 +33,34 @@ def load_rag():
     if _rag_cache is not None:
         return _rag_cache
 
+    metadata = []
+    meta_path = resolve_rag_file("events_metadata.json")
+    if meta_path.exists():
+        try:
+            with open(meta_path, "r", encoding="utf-8") as f:
+                metadata = json.load(f)
+        except Exception as exc:
+            print(f"Warning: Failed reading events metadata: {exc}")
+
+    # Use lightweight search by default to avoid heavy PyTorch/SentenceTransformer downloads and RAM OOM on cloud
+    use_lightweight = os.getenv("USE_LIGHTWEIGHT_RAG", "true").lower() in ("true", "1")
+    if use_lightweight:
+        _rag_cache = (None, metadata, None)
+        return _rag_cache
+
     try:
         import faiss
         from sentence_transformers import SentenceTransformer
 
-        if not INDEX_FILE.exists() or not METADATA_FILE.exists():
+        index_path = resolve_rag_file("events_index.faiss")
+        if not index_path.exists() or not metadata:
             raise FileNotFoundError("RAG index or metadata file not found.")
 
-        index = faiss.read_index(str(INDEX_FILE))
-        with open(METADATA_FILE, "r", encoding="utf-8") as f:
-            metadata = json.load(f)
+        index = faiss.read_index(str(index_path))
         model = SentenceTransformer(MODEL_NAME)
         _rag_cache = (index, metadata, model)
         return _rag_cache
     except Exception as e:
-        # Load metadata once so fallback search does not re-read from disk on every query
-        metadata = []
-        if METADATA_FILE.exists():
-            try:
-                with open(METADATA_FILE, "r", encoding="utf-8") as f:
-                    metadata = json.load(f)
-            except Exception:
-                pass
         _rag_cache = (None, metadata, None)
         return _rag_cache
 
